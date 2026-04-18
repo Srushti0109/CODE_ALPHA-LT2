@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern, glassmorphism language translator web app supporting multiple languages with text-to-speech capabilities.">
+    <title>Polyglot - Modern Translator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Polyglot Translator</h1>
+            <p>Seamlessly translate text across languages</p>
+        </header>
+
+        <main class="translator-glass">
+            <div class="controls">
+                <div class="select-group">
+                    <label for="sourceLang">From</label>
+                    <select id="sourceLang">
+                        <option value="en">English</option>
+                        <option value="hi">Hindi</option>
+                        <option value="mr">Marathi</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+                
+                <button class="icon-btn swap-btn" id="swapLang" title="Swap Languages">
+                    <i class="fas fa-exchange-alt"></i>
+                </button>
+
+                <div class="select-group">
+                    <label for="targetLang">To</label>
+                    <select id="targetLang">
+                        <option value="hi">Hindi</option>
+                        <option value="en">English</option>
+                        <option value="mr">Marathi</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="input-output-wrapper">
+                <div class="text-area-container source-container">
+                    <textarea id="sourceText" placeholder="Enter text here..."></textarea>
+                    <div class="action-bar">
+                        <button class="icon-btn" id="listenSource" title="Listen">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <span class="char-count" id="charCount">0 / 5000</span>
+                    </div>
+                </div>
+
+                <div class="text-area-container target-container">
+                    <div class="output-wrapper">
+                        <div id="outputLoading" class="hidden">
+                            <div class="spinner"></div>
+                            <span>Translating...</span>
+                        </div>
+                        <div id="outputError" class="hidden">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span id="errorText">Translation failed.</span>
+                        </div>
+                        <textarea id="targetText" readonly placeholder="Translation will appear here..."></textarea>
+                    </div>
+                    <div class="action-bar target-actions">
+                        <button class="icon-btn" id="listenTarget" title="Listen">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="icon-btn" id="copyTarget" title="Copy to Clipboard">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button id="translateBtn" class="primary-btn">
+                <span>Translate</span>
+                <i class="fas fa-language"></i>
+            </button>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
