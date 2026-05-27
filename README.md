@@ -1,6 +1,6 @@
 Language Translator 🌐✨
 Instant Translation Tool | CodeAlpha Task 2
-https://code-alpha-lt-2-p5shl66is-srush.vercel.app/
+https://code-alpha-lt-2.vercel.app/
 
 📌 Overview
 CodeAlpha LT2 is a fast and intuitive web-based translation tool. It leverages powerful APIs to provide real-time text conversion, helping users break down language barriers with a single click.
